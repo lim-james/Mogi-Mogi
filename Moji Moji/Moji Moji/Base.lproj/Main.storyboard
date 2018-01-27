@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xSf-Xa-SBz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleColorEmoji@2x.ttc">
+            <string>AppleColorEmoji</string>
+        </array>
+        <array key="alba.ttf">
+            <string>Alba</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yUc-ia-i7T">
+            <objects>
+                <viewController id="xSf-Xa-SBz" customClass="ViewController" customModule="Moji_Moji" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mBg-2h-ciK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDe-zv-yis">
+                                <rect key="frame" x="0.0" y="171" width="375" height="496"/>
+                                <connections>
+                                    <segue destination="AbY-sV-t4Q" kind="embed" identifier="showStatus" id="iub-4O-cG1"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zze-Pz-v4P">
+                                <rect key="frame" x="375" y="171" width="375" height="496"/>
+                                <connections>
+                                    <segue destination="eDf-c8-5gn" kind="embed" identifier="showChoose" id="j6w-Pb-JGv"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2X-fm-zFg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4O-VS-n2d">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="63"/>
+                                        <fontDescription key="fontDescription" name="Alba" family="Alba" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUm-qE-ZUv" customClass="CustomButton" customModule="Moji_Moji" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="127" width="345" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="B3h-Fo-dF6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Alba" family="Alba" pointSize="20"/>
+                                        <state key="normal" title="Give"/>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="xSf-Xa-SBz" eventType="touchUpInside" id="DTC-th-oNG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAk-sg-zaH" customClass="CustomButton" customModule="Moji_Moji" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="127" width="345" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="zg4-FK-w7l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Alba" family="Alba" pointSize="20"/>
+                                        <state key="normal" title="Home"/>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="xSf-Xa-SBz" eventType="touchUpInside" id="maS-p6-EXi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXc-DR-ISb">
+                                        <rect key="frame" x="375" y="64" width="375" height="63"/>
+                                        <fontDescription key="fontDescription" name="Alba" family="Alba" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pXc-DR-ISb" firstAttribute="width" secondItem="u4O-VS-n2d" secondAttribute="width" id="4zb-yW-G0n"/>
+                                    <constraint firstItem="pXc-DR-ISb" firstAttribute="leading" secondItem="u4O-VS-n2d" secondAttribute="trailing" id="Dci-On-fcB"/>
+                                    <constraint firstAttribute="trailing" secondItem="u4O-VS-n2d" secondAttribute="trailing" id="EyX-hc-i8W"/>
+                                    <constraint firstItem="pXc-DR-ISb" firstAttribute="height" secondItem="u4O-VS-n2d" secondAttribute="height" id="IbJ-S0-yb3"/>
+                                    <constraint firstAttribute="bottom" secondItem="FUm-qE-ZUv" secondAttribute="bottom" id="KSR-9p-n2v"/>
+                                    <constraint firstItem="QAk-sg-zaH" firstAttribute="top" secondItem="u4O-VS-n2d" secondAttribute="bottom" id="L94-Ix-dWz"/>
+                                    <constraint firstItem="FUm-qE-ZUv" firstAttribute="top" secondItem="u4O-VS-n2d" secondAttribute="bottom" id="Lg7-J7-Pop"/>
+                                    <constraint firstItem="pXc-DR-ISb" firstAttribute="top" secondItem="H2X-fm-zFg" secondAttribute="top" constant="64" id="O6g-9H-6ia"/>
+                                    <constraint firstItem="FUm-qE-ZUv" firstAttribute="leading" secondItem="H2X-fm-zFg" secondAttribute="leading" constant="15" id="Y8H-bQ-LZ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="QAk-sg-zaH" secondAttribute="trailing" constant="15" id="fYi-E0-aye"/>
+                                    <constraint firstItem="u4O-VS-n2d" firstAttribute="top" secondItem="H2X-fm-zFg" secondAttribute="top" constant="64" id="hYb-xa-yD0"/>
+                                    <constraint firstItem="u4O-VS-n2d" firstAttribute="leading" secondItem="H2X-fm-zFg" secondAttribute="leading" id="jtJ-ik-IRE"/>
+                                    <constraint firstAttribute="trailing" secondItem="FUm-qE-ZUv" secondAttribute="trailing" constant="15" id="kBI-gz-Wge"/>
+                                    <constraint firstItem="QAk-sg-zaH" firstAttribute="leading" secondItem="H2X-fm-zFg" secondAttribute="leading" constant="15" id="zWP-2b-HW7"/>
+                                    <constraint firstAttribute="bottom" secondItem="QAk-sg-zaH" secondAttribute="bottom" id="zbc-wO-bdQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YDe-zv-yis" firstAttribute="top" secondItem="H2X-fm-zFg" secondAttribute="bottom" id="3iJ-BL-abh"/>
+                            <constraint firstItem="H2X-fm-zFg" firstAttribute="leading" secondItem="Dv5-Te-RHc" secondAttribute="leading" id="4qX-Mh-ASi"/>
+                            <constraint firstItem="YDe-zv-yis" firstAttribute="width" secondItem="zze-Pz-v4P" secondAttribute="width" id="XmP-id-CHf"/>
+                            <constraint firstAttribute="bottom" secondItem="zze-Pz-v4P" secondAttribute="bottom" id="Yw4-j5-vwc"/>
+                            <constraint firstItem="YDe-zv-yis" firstAttribute="trailing" secondItem="Dv5-Te-RHc" secondAttribute="trailing" id="hAp-2M-VnD"/>
+                            <constraint firstItem="YDe-zv-yis" firstAttribute="bottom" secondItem="Dv5-Te-RHc" secondAttribute="bottom" id="jtV-Xa-ElH"/>
+                            <constraint firstItem="YDe-zv-yis" firstAttribute="height" secondItem="zze-Pz-v4P" secondAttribute="height" id="pMz-mB-lnh"/>
+                            <constraint firstItem="H2X-fm-zFg" firstAttribute="trailing" secondItem="Dv5-Te-RHc" secondAttribute="trailing" id="qpl-2U-tFV"/>
+                            <constraint firstItem="zze-Pz-v4P" firstAttribute="leading" secondItem="YDe-zv-yis" secondAttribute="trailing" id="tEJ-2s-67j"/>
+                            <constraint firstItem="H2X-fm-zFg" firstAttribute="top" secondItem="mBg-2h-ciK" secondAttribute="top" id="tiV-Ms-5zJ"/>
+                            <constraint firstItem="YDe-zv-yis" firstAttribute="leading" secondItem="Dv5-Te-RHc" secondAttribute="leading" id="tsO-RU-1hA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dv5-Te-RHc"/>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="QAk-sg-zaH" id="BRs-WW-831"/>
+                        <outlet property="chooseContainer" destination="zze-Pz-v4P" id="YQ7-al-qnK"/>
+                        <outlet property="chooseTitleLabel" destination="pXc-DR-ISb" id="NKu-Lu-DLT"/>
+                        <outlet property="headerView" destination="H2X-fm-zFg" id="PeN-Rr-pGR"/>
+                        <outlet property="statusButton" destination="FUm-qE-ZUv" id="kRR-Z3-qPF"/>
+                        <outlet property="statusContainer" destination="YDe-zv-yis" id="8BL-Sf-boC"/>
+                        <outlet property="statusTitleLabel" destination="u4O-VS-n2d" id="nQy-4Q-JVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLt-fv-xVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594.39999999999998" y="109.29535232383809"/>
+        </scene>
+        <!--Status Controller-->
+        <scene sceneID="ZGC-H5-0hA">
+            <objects>
+                <collectionViewController id="AbY-sV-t4Q" customClass="StatusController" customModule="Moji_Moji" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="X9h-wx-f5n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="496"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lfC-N0-6Gy">
+                            <size key="itemSize" width="125" height="172.5"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pBs-lE-whc" customClass="EmojiCell" customModule="Moji_Moji" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="172.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="172.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxO-lm-qoP">
+                                            <rect key="frame" x="0.0" y="133" width="125" height="47.5"/>
+                                            <fontDescription key="fontDescription" name="Alba" family="Alba" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-nJ-vKo" customClass="EmojiButton" customModule="Moji_Moji" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wFi-nJ-vKo" secondAttribute="height" multiplier="1:1" id="JE8-yl-ojK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="50"/>
+                                            <state key="normal" title="[]">
+                                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FxO-lm-qoP" secondAttribute="trailing" id="Gid-55-NDF"/>
+                                    <constraint firstItem="wFi-nJ-vKo" firstAttribute="top" secondItem="pBs-lE-whc" secondAttribute="top" id="H8v-LG-p9T"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFi-nJ-vKo" secondAttribute="trailing" id="HWX-bU-lnL"/>
+                                    <constraint firstItem="wFi-nJ-vKo" firstAttribute="leading" secondItem="pBs-lE-whc" secondAttribute="leading" id="ITw-Dd-mxq"/>
+                                    <constraint firstItem="FxO-lm-qoP" firstAttribute="top" secondItem="wFi-nJ-vKo" secondAttribute="bottom" constant="8" id="UDa-nh-w9q"/>
+                                    <constraint firstItem="FxO-lm-qoP" firstAttribute="leading" secondItem="pBs-lE-whc" secondAttribute="leading" id="tc1-c5-5sZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="countLabel" destination="FxO-lm-qoP" id="VEA-cZ-Wom"/>
+                                    <outlet property="emojiButton" destination="wFi-nJ-vKo" id="5EL-TR-cLL"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AbY-sV-t4Q" id="md2-Mf-Dh2"/>
+                            <outlet property="delegate" destination="AbY-sV-t4Q" id="gru-Fl-sB0"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ut6-Md-gGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="186"/>
+        </scene>
+        <!--Choose Controller-->
+        <scene sceneID="Uhf-IJ-OMp">
+            <objects>
+                <collectionViewController id="eDf-c8-5gn" customClass="ChooseController" customModule="Moji_Moji" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="KGq-gP-gTx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="496"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iII-IW-b7D">
+                            <size key="itemSize" width="125" height="125"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="1Wx-to-t2c" customClass="ChooseCell" customModule="Moji_Moji" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyY-tQ-mcZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="AyY-tQ-mcZ" secondAttribute="height" multiplier="1:1" id="3ZZ-qc-9In"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="50"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AyY-tQ-mcZ" secondAttribute="trailing" id="CWd-NI-5pk"/>
+                                    <constraint firstItem="AyY-tQ-mcZ" firstAttribute="leading" secondItem="1Wx-to-t2c" secondAttribute="leading" id="Ojc-4d-JJL"/>
+                                    <constraint firstAttribute="bottom" secondItem="AyY-tQ-mcZ" secondAttribute="bottom" id="P2U-Ym-WuQ"/>
+                                    <constraint firstItem="AyY-tQ-mcZ" firstAttribute="top" secondItem="1Wx-to-t2c" secondAttribute="top" id="uzR-IW-ojX"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="emojiButton" destination="AyY-tQ-mcZ" id="8Xb-Yw-nir"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="eDf-c8-5gn" id="dPQ-3J-LkE"/>
+                            <outlet property="delegate" destination="eDf-c8-5gn" id="kCL-8t-mLI"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-Ww-JOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="184.40779610194903"/>
+        </scene>
+    </scenes>
+</document>
