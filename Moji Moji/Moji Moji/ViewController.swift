@@ -10,15 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var emojis = [EmojiData(emoji: "👌", count: 57),
-                  EmojiData(emoji: "🤪", count: 56),
-                  EmojiData(emoji: "👾", count: 49),
-                  EmojiData(emoji: "👊", count: 38),
-                  EmojiData(emoji: "🤦‍♀️", count: 37),
-                  EmojiData(emoji: "🕶", count: 37),
-                  EmojiData(emoji: "🐶", count: 24),
-                  EmojiData(emoji: "👍", count: 20),
-                  EmojiData(emoji: "🍕", count: 7)]
+    var mojimoji = [MojiMoji]()
+    var emojis: [String: Int] = [:]
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var statusTitleLabel: UILabel!
@@ -34,6 +27,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for m in mojimoji {
+            for k in m.emojis.keys {
+                emojis[k] = m.emojis[k]
+            }
+        }
         
         view.backgroundColor = .background
         headerView.backgroundColor = .background
@@ -58,7 +57,7 @@ class ViewController: UIViewController {
             return  "you seem lonely"
         } else {
             var count = 0
-            for e in emojis { count += e.count }
+            for e in emojis { count += e.value }
             if count >= 10 && count < 100 {
                 return "😐👌"
             } else if count == 100 {

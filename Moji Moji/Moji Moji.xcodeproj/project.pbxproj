@@ -13,6 +13,7 @@
 		7412E3BE201CDC5A002F116E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7412E3BD201CDC5A002F116E /* Assets.xcassets */; };
 		7412E3C1201CDC5A002F116E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7412E3BF201CDC5A002F116E /* LaunchScreen.storyboard */; };
 		7412E3CA201CE012002F116E /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7412E3C9201CE012002F116E /* EmojiCell.swift */; };
+		749937EA201D349200C49532 /* MojiMoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749937E9201D349200C49532 /* MojiMoji.swift */; };
 		74AB6877201D0EE900ACEBE6 /* emoji.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74AB6876201D0D3D00ACEBE6 /* emoji.txt */; };
 		74AB6879201D18CF00ACEBE6 /* EmojiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB6878201D18CF00ACEBE6 /* EmojiData.swift */; };
 		74AB687B201D1AF400ACEBE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB687A201D1AF400ACEBE6 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		7412E3C2201CDC5A002F116E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7412E3C8201CDDE2002F116E /* alba.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alba.ttf; sourceTree = "<group>"; };
 		7412E3C9201CE012002F116E /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		749937E9201D349200C49532 /* MojiMoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MojiMoji.swift; sourceTree = "<group>"; };
 		74AB6876201D0D3D00ACEBE6 /* emoji.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = emoji.txt; sourceTree = "<group>"; };
 		74AB6878201D18CF00ACEBE6 /* EmojiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiData.swift; sourceTree = "<group>"; };
 		74AB687A201D1AF400ACEBE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				74AB6876201D0D3D00ACEBE6 /* emoji.txt */,
 				7412E3B6201CDC5A002F116E /* AppDelegate.swift */,
+				749937E9201D349200C49532 /* MojiMoji.swift */,
 				74AB6878201D18CF00ACEBE6 /* EmojiData.swift */,
 				74FECB07201CF90F001B2850 /* ColorExtension.swift */,
 				74FECB09201D0178001B2850 /* CustomButton.swift */,
@@ -174,6 +177,7 @@
 				74AB6879201D18CF00ACEBE6 /* EmojiData.swift in Sources */,
 				74AB687D201D1DF100ACEBE6 /* ChooseController.swift in Sources */,
 				74FECB08201CF90F001B2850 /* ColorExtension.swift in Sources */,
+				749937EA201D349200C49532 /* MojiMoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +315,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86R4D6VBCN;
+				DEVELOPMENT_TEAM = XPZ2DXUGSX;
 				INFOPLIST_FILE = "Moji Moji/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jameslim.Moji-Moji";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.james.Moji-Moji";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,11 +331,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86R4D6VBCN;
+				DEVELOPMENT_TEAM = XPZ2DXUGSX;
 				INFOPLIST_FILE = "Moji Moji/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jameslim.Moji-Moji";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.james.Moji-Moji";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

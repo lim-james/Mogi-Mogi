@@ -8,7 +8,3 @@
 
 import UIKit
 
-struct EmojiData {
-    var emoji: String
-    var count: Int
-}

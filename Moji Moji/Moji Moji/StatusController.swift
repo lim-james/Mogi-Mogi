@@ -10,12 +10,19 @@ import UIKit
 
 class StatusController: UICollectionViewController {
     
-    var emojis = [EmojiData]()
+    var emojis: [String: Int] = [:]
+    var name = [String]()
+    var count = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.backgroundColor = .background
         collectionView?.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 0, right: 15)
+        
+        for e in emojis {
+            name.append(e.key)
+            count.append(e.value)
+        }
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -28,8 +35,8 @@ class StatusController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! EmojiCell
-        cell.emojiButton.setTitle(emojis[indexPath.row].emoji, for: .normal)
-        cell.countLabel.text = "x\(emojis[indexPath.row].count)"
+        cell.emojiButton.setTitle(name[indexPath.row], for: .normal)
+        cell.countLabel.text = "x\(count[indexPath.row])"
         return cell
     }
 

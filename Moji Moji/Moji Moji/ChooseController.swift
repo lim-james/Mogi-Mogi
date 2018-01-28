@@ -53,6 +53,17 @@ class ChooseController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let uuid = UserDefaults.standard.string(forKey: "uuid")!
+        let newPath = uuid + " " + UUID().uuidString + " "
+        let fullLink = "https://joeltio.github.io/moji-moji/#/receive/" + newPath.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! + emojis[indexPath.row]
+        
+        let linkToShare = [fullLink]
+        let activityController = UIActivityViewController(activityItems: linkToShare, applicationActivities: nil)
+        self.present(activityController, animated: true, completion: nil)
+
+    }
+    
 }
 
 extension ChooseController : UICollectionViewDelegateFlowLayout {
